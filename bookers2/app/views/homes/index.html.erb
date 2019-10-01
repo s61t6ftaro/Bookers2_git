@@ -1,26 +1,27 @@
-<header class="col-bl navbar nav_top nav_inverse">
+<header class="navbar navbar-inverse navbar-fixed_top">
   <div class="container">  
-    <nav class="nav navber_nav nav_left">
+    <nav class="nav navbar-nav navbar-left">
       <span>Bookers</span>
     </nav>
     <nav>
-      <ul class="nav navber_nav nav_right">
-      
+      <ul class="nav navbar_nav navbar-right">      
         <li>
-          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-          <%= link_to "home" %>
+          <%= link_to 'home',new_user_session_path,{:class=>"glyphicon glyphicon-home"} %>
         </li>
         <li>
-          <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-          <%= link_to "About" %>
+          <%= link_to(new_user_session_path) do %>
+            <span class="glyphicon glyphicon-link" aria-hidden="true"></span>About
+          <% end %>
         </li>
         <li>
-          <span class="glyphicon glyphicon-edit" aria-hidden="true" style="color:white"></span>
-          <%= link_to "Sign up" %>
+          <%= link_to(new_user_session_path) do %>
+            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>sign up
+          <% end %>
         </li>
         <li>
-          <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-          <%= link_to "login" %>
+          <%= link_to(new_user_session_path) do %>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>login
+          <% end %>
         </li>
       </ul>
     </nav>
